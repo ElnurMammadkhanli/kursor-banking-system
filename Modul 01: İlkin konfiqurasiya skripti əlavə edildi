@@ -1,0 +1,19 @@
+/
+SET SERVEROUTPUT ON
+/
+
+DECLARE
+c_bank_name CONSTANT VARCHAR2(50) := 'Kursor Banking System';
+c_default_rate CONSTANT NUMBER(4,2) := 18.5;
+c_min_deposit CONSTANT NUMBER := 100;
+v_current_date DATE := SYSDATE;
+v_initial_clients NUMBER := 0;
+begin
+dbms_output.put_line('Layihenin adı: ' || c_bank_name);
+dbms_output.put_line('Icra tarixi: ' || v_current_date);
+dbms_output.put_line('Standart illik kredit faizi: ' || c_default_rate);
+dbms_output.put_line('Minimum depozit heddi: ' || c_min_deposit);
+dbms_output.put_line('Ilkin mushteri sayi: ' || v_initial_clients);
+dbms_output.put_line('Sistem statusu: ' || 'Hazirdir - Modul 01');
+
+end;
